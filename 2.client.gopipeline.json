@@ -6,7 +6,7 @@
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "server",
+      "pipeline": "build",
       "stage": "test"
     },
     {
