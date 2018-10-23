@@ -8,11 +8,6 @@
       "name": "dependency",
       "pipeline": "build",
       "stage": "build"
-    },
-    {
-      "url": "https://github.com/arvindsv/gocd-demo-config-repo-code",
-      "type": "git",
-      "name": "code"
     }
   ],
   "stages": [
