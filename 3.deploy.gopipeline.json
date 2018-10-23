@@ -5,12 +5,6 @@
   "materials": [
     {
       "type": "dependency",
-      "name": "build",
-      "pipeline": "build",
-      "stage": "build"
-    },
-    {
-      "type": "dependency",
       "name": "functional-test",
       "pipeline": "functional-test",
       "stage": "test"
