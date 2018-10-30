@@ -1,10 +1,10 @@
 {
-  "name": "build",
+  "name": "server",
   "environment_variables": [],
-  "group" : "demo",
+  "group" : "demo-client-server",
   "materials": [
     {
-      "url": "https://github.com/arvindsv/gocd-demo-config-repo-code",
+      "url": "https://github.com/manupaisable/spincast-todobackend",
       "type": "git"
     }
   ],
@@ -30,8 +30,11 @@
               "type": "exec",
               "run_if": "passed",
               "on_cancel" : null,
-              "command": "./build.sh",
-              "arguments": [],
+              "command": "ls",
+              "arguments": [
+                "-l",
+                "."
+              ],
               "working_directory": null
             }
           ]

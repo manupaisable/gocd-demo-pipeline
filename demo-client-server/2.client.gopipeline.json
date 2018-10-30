@@ -1,11 +1,18 @@
 {
-  "name": "server",
+  "name": "client",
   "environment_variables": [],
-  "group" : "demo",
+  "group" : "demo-client-server",
   "materials": [
     {
-      "url": "https://github.com/manupaisable/spincast-todobackend",
-      "type": "git"
+      "type": "dependency",
+      "name": "dependency",
+      "pipeline": "server",
+      "stage": "test"
+    },
+    {
+      "url": "https://github.com/manupaisable/todo-backend-client",
+      "type": "git",
+      "name": "code"
     }
   ],
   "stages": [
