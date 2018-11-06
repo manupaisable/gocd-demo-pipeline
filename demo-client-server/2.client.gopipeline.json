@@ -5,14 +5,14 @@
   "materials": [
     {
       "type": "dependency",
-      "name": "dependency",
+      "name": "server-dependency",
       "pipeline": "server",
       "stage": "test"
     },
     {
       "url": "https://github.com/manupaisable/todo-backend-client",
       "type": "git",
-      "name": "code"
+      "name": "client-code"
     }
   ],
   "stages": [
