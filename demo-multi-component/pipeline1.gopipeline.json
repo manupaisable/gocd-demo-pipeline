@@ -1,0 +1,77 @@
+{
+  "name": "pipeline-1",
+  "environment_variables": [],
+  "group" : "demo-multi-component",
+  "materials": [
+    {
+      "url": "https://github.com/manupaisable/spincast-todobackend",
+      "type": "git"
+    }
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "build",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "ls",
+              "arguments": [
+                "-l",
+                "."
+              ],
+              "working_directory": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "test",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "ls",
+              "arguments": [
+                "-l",
+                "."
+              ],
+              "working_directory": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
