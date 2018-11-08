@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "single-client",
   "environment_variables": [],
   "group" : "demo-multi-component",
   "materials": [
