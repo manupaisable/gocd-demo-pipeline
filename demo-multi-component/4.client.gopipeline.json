@@ -1,11 +1,18 @@
 {
-  "name": "pipeline-2",
+  "name": "client",
   "environment_variables": [],
   "group" : "demo-multi-component",
   "materials": [
     {
-      "url": "https://github.com/SkeltonThatcher/spincast-todobackend",
-      "type": "git"
+      "type": "dependency",
+      "name": "backend-integration-dependency",
+      "pipeline": "backend-integration",
+      "stage": "performance-test"
+    },
+    {
+      "url": "https://github.com/manupaisable/spincast-todobackend",
+      "type": "git",
+      "name": "client-code"
     }
   ],
   "stages": [
@@ -18,6 +25,38 @@
       "jobs": [
         {
           "name": "build",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "ls",
+              "arguments": [
+                "-l",
+                "."
+              ],
+              "working_directory": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "install",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "install",
           "environment_variables": [],
           "tabs": [],
           "resources": [],
