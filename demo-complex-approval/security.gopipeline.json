@@ -1,0 +1,49 @@
+{
+  "name": "Security",
+  "environment_variables": [],
+  "group" : "example-with-CAB-intermediate-pipeline",
+  "materials": [
+    {
+      "type": "dependency",
+      "name": "dependency",
+      "pipeline": "CI",
+      "stage": "unit_tests"
+    }
+  ],
+  "stages": [
+    {
+      "name": "security_tests",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "approval": {
+          "type": "manual",
+          "users": [],
+          "roles": []
+      },
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "security_tests",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "ls -la .",
+              "arguments": [],
+              "working_directory": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
