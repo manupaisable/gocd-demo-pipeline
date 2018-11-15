@@ -1,0 +1,18 @@
+    <security>
+      <authConfigs>
+        <authConfig id="demo-users" 
+                    pluginId="cd.go.authentication.passwordfile">
+          <property>
+            <key>PasswordFilePath</key>
+            <value>/godata/config/htpasswd</value>
+          </property>
+        </authConfig>
+      </authConfigs>
+      <roles>
+        <role name="CAB_member">
+          <users>
+            <user>jsmith</user>
+          </users>
+        </role>
+      </roles>
+    </security>

@@ -19,7 +19,7 @@
       "approval": {
           "type": "manual",
           "users": [],
-          "roles": []
+          "roles": [CAB_member]
       },
       "environment_variables": [],
       "jobs": [
