@@ -30,8 +30,11 @@
               "type": "exec",
               "run_if": "passed",
               "on_cancel" : null,
-              "command": "ls -la .",
-              "arguments": [],
+              "command": "ls",
+              "arguments": [
+                "-l",
+                "."
+              ],
               "working_directory": null
             }
           ]
