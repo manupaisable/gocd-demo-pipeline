@@ -50,7 +50,7 @@
       "clean_working_directory": false,
       "approval": {
           "type": "manual",
-          "users": [],
+          "users": [jsmith],
           "roles": [CAB_member]
       },
       "environment_variables": [],
