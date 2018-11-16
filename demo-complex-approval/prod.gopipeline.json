@@ -7,7 +7,7 @@
       "type": "dependency",
       "name": "dependency",
       "pipeline": "CAB",
-      "stage": "CAB_release_schedule"
+      "stage": "CAB_approval"
     }
   ],
   "stages": [
