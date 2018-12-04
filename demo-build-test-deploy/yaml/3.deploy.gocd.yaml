@@ -6,7 +6,9 @@ pipelines:
         pipeline: functional-test
         stage: functional-test
     stages:
-      - deploy:
-          tasks:
-           - exec:
-               command: ls -l
+      - deploy: 
+          jobs:
+            deploy: 
+              tasks:
+               - exec: 
+                   command: ls -l
