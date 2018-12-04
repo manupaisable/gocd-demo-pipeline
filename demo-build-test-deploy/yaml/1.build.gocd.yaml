@@ -1,0 +1,13 @@
+pipelines:
+  build:
+    group: demo-build-test-deploy-as-code
+    materials:
+      gocd-demo-config-repo-code:  
+        git: https://github.com/arvindsv/gocd-demo-config-repo-code
+    stages:
+      - build: 
+          jobs:
+            build: 
+              tasks:
+               - exec: 
+                   command: ls -l

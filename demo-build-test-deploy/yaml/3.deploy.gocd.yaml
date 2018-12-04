@@ -1,0 +1,12 @@
+pipelines:
+  deploy:
+    group: demo-build-test-deploy-as-yaml
+    materials:
+      upstream-functional-test:
+        pipeline: functional-test
+        stage: functional-test
+    stages:
+      - deploy:
+          tasks:
+           - exec:
+               command: ls -l
