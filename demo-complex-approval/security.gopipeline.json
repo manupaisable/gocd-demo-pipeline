@@ -12,7 +12,7 @@
   ],
   "stages": [
     {
-      "name": "security_tests-intermediate-pipeline",
+      "name": "security_tests",
       "fetch_materials": true,
       "never_cleanup_artifacts": false,
       "clean_working_directory": false,
