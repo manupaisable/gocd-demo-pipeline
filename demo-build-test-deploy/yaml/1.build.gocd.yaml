@@ -1,6 +1,6 @@
 pipelines:
   build:
-    group: demo-build-test-deploy-as-code
+    group: demo-build-test-deploy-as-yaml
     materials:
       gocd-demo-config-repo-code:  
         git: https://github.com/arvindsv/gocd-demo-config-repo-code
