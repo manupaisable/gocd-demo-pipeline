@@ -11,4 +11,5 @@ pipelines:
             deploy: 
               tasks:
                - exec: 
-                   command: ls -l .
+                   command: ls
+                   arguments: "-l"

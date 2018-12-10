@@ -11,4 +11,5 @@ pipelines:
             test: 
               tasks:
                - exec: 
-                   command: ls -l .
+                   command: ls
+                   arguments: "-l"
